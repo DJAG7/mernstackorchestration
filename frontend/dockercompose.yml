@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  helloservice:
+    build:
+      context: ./helloService
+      dockerfile: dockerfile
+    container_name: hscontainer
+    ports:
+      - "3001:3001"
+    image: hsimage
+  profileservice:
+    build:
+      context: ./profileService
+      dockerfile: dockerfile
+    container_name: pscontainer
+    ports:
+      - "3002:3002"
+    image: psimage
